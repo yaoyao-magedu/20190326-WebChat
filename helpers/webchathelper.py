@@ -34,14 +34,23 @@ class WebChatHelper(QThread):
         self.sign_login_ok.emit()
 
     def get_friends(self):
+
         lst_user = []
-        friends = itchat.get_chatrooms()
-        # friends = itchat.get_friends()
+        friends = itchat.get_friends()
         for friend_ in friends:
             user = {}
             user["NickName"] = friend_["NickName"]
             user["UserName"] = friend_["UserName"]
             lst_user.append(user)
+
+    def get_groups(self):
+        lst_group = []
+        groups = itchat.get_chatrooms()
+        for group_ in groups:
+            user = {}
+            user["NickName"] = group_["NickName"]
+            user["UserName"] = group_["UserName"]
+            lst_group.append(user)
 
         return lst_user
 

@@ -5,7 +5,7 @@ A
 from PyQt5.QtWidgets import *
 from uis.ui_login import Ui_ui_login
 from PyQt5.QtGui import *
-
+from PyQt5.QtCore import *
 
 class DlgQRLogin(QDialog):
     def __init__(self, chat_):
@@ -22,3 +22,4 @@ class DlgQRLogin(QDialog):
         pix_qr = QPixmap.fromImage(img_qr)
         self.ui.lbl_qr.setPixmap(pix_qr)
         self.ui.lbl_qr.setScaledContents(True)
+        self.ui.lbl_qr.setCursor(QCursor(Qt.ArrowCursor))

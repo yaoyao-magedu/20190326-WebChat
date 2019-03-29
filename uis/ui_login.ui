@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>ui_login</class>
-    <widget class="QDialog" name="ui_login">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>400</width>
-                <height>400</height>
-            </rect>
-        </property>
-        <property name="windowTitle">
-            <string>Dialog</string>
-        </property>
-        <widget class="QLabel" name="lbl_qr">
-            <property name="geometry">
-                <rect>
-                    <x>0</x>
-                    <y>0</y>
-                    <width>400</width>
-                    <height>400</height>
-                </rect>
-            </property>
-            <property name="font">
-                <font>
-                    <family>STHeiti</family>
-                    <pointsize>24</pointsize>
-                </font>
-            </property>
-            <property name="text">
-                <string>加载二维码.....</string>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignCenter</set>
-            </property>
-        </widget>
-    </widget>
-    <resources/>
-    <connections/>
+ <class>ui_login</class>
+ <widget class="QDialog" name="ui_login">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>WaitCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">微信登陆</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../下载/1L3ryyg.png</normaloff>../../../下载/1L3ryyg.png</iconset>
+  </property>
+  <widget class="QLabel" name="lbl_qr">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>STHeiti</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>加载二维码.....</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>
