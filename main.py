@@ -3,9 +3,11 @@
 Author : yaoyao
 Usage : Exec App
 """
-from apps.webchatapp import WebChatApp
-from PyQt5.QtWidgets import QApplication
 import sys
+
+from PyQt5.QtWidgets import QApplication
+
+from apps.webchatapp import WebChatApp
 
 web_app = QApplication(sys.argv)
 chat_app = WebChatApp()

@@ -1,173 +1,681 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>600</width>
-    <height>400</height>
-   </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>600</width>
-    <height>400</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>600</width>
-    <height>400</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
-  <widget class="QFrame" name="frame">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>240</width>
-     <height>400</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::Box</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QListView" name="groups">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>230</y>
-      <width>238</width>
-      <height>171</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="friend_lable">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>241</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>好友</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QListView" name="friends">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>30</y>
-      <width>238</width>
-      <height>171</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="group_lable">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>200</y>
-      <width>241</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>群组</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QScrollArea" name="scrollArea">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>50</y>
-     <width>341</width>
-     <height>291</height>
-    </rect>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="chatdetail">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>339</width>
-      <height>289</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>360</y>
-     <width>271</width>
-     <height>30</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>360</y>
-     <width>60</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>发送</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="chatname">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>10</y>
-     <width>341</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="text">
-    <string>选择聊天</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    <class>Form</class>
+    <widget class="QWidget" name="Form">
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>600</height>
+            </rect>
+        </property>
+        <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+            </sizepolicy>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>800</width>
+                <height>600</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>800</width>
+                <height>600</height>
+            </size>
+        </property>
+        <property name="contextMenuPolicy">
+            <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <widget class="QFrame" name="left">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>301</width>
+                    <height>601</height>
+                </rect>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">background:#4D4D4D</string>
+            </property>
+            <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QTabWidget" name="tabWidget">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>60</y>
+                        <width>301</width>
+                        <height>541</height>
+                    </rect>
+                </property>
+                <property name="styleSheet">
+                    <string notr="true">background:#4D4D4D;color:#FFFFFF</string>
+                </property>
+                <property name="tabPosition">
+                    <enum>QTabWidget::West</enum>
+                </property>
+                <property name="tabShape">
+                    <enum>QTabWidget::Rounded</enum>
+                </property>
+                <property name="currentIndex">
+                    <number>3</number>
+                </property>
+                <property name="iconSize">
+                    <size>
+                        <width>32</width>
+                        <height>32</height>
+                    </size>
+                </property>
+                <property name="elideMode">
+                    <enum>Qt::ElideMiddle</enum>
+                </property>
+                <property name="documentMode">
+                    <bool>false</bool>
+                </property>
+                <property name="tabsClosable">
+                    <bool>false</bool>
+                </property>
+                <property name="movable">
+                    <bool>false</bool>
+                </property>
+                <property name="tabBarAutoHide">
+                    <bool>false</bool>
+                </property>
+                <widget class="QWidget" name="currenttab">
+                    <attribute name="icon">
+                        <iconset>
+                            <normaloff>../imgs/chat_off.png</normaloff>
+                            <normalon>../imgs/chat_on.png</normalon>../imgs/chat_off.png
+                        </iconset>
+                    </attribute>
+                    <attribute name="title">
+                        <string/>
+                    </attribute>
+                    <widget class="QListView" name="current">
+                        <property name="geometry">
+                            <rect>
+                                <x>0</x>
+                                <y>0</y>
+                                <width>261</width>
+                                <height>531</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#4D4D4D</string>
+                        </property>
+                        <property name="frameShape">
+                            <enum>QFrame::NoFrame</enum>
+                        </property>
+                        <property name="editTriggers">
+                            <set>QAbstractItemView::NoEditTriggers</set>
+                        </property>
+                        <property name="iconSize">
+                            <size>
+                                <width>32</width>
+                                <height>32</height>
+                            </size>
+                        </property>
+                    </widget>
+                </widget>
+                <widget class="QWidget" name="friendstab">
+                    <attribute name="icon">
+                        <iconset>
+                            <normaloff>../imgs/list_off.png</normaloff>
+                            <normalon>../imgs/list_on.png</normalon>../imgs/list_off.png
+                        </iconset>
+                    </attribute>
+                    <attribute name="title">
+                        <string/>
+                    </attribute>
+                    <widget class="QListView" name="friends">
+                        <property name="geometry">
+                            <rect>
+                                <x>0</x>
+                                <y>50</y>
+                                <width>251</width>
+                                <height>481</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">color:#FFFFFF</string>
+                        </property>
+                        <property name="frameShape">
+                            <enum>QFrame::NoFrame</enum>
+                        </property>
+                        <property name="editTriggers">
+                            <set>QAbstractItemView::NoEditTriggers</set>
+                        </property>
+                        <property name="iconSize">
+                            <size>
+                                <width>32</width>
+                                <height>32</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" name="searchbar">
+                        <property name="geometry">
+                            <rect>
+                                <x>10</x>
+                                <y>10</y>
+                                <width>201</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" name="searchButton">
+                        <property name="geometry">
+                            <rect>
+                                <x>220</x>
+                                <y>10</y>
+                                <width>31</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                        <property name="text">
+                            <string>&gt;&gt;</string>
+                        </property>
+                    </widget>
+                </widget>
+                <widget class="QWidget" name="mps">
+                    <attribute name="icon">
+                        <iconset>
+                            <normaloff>../imgs/mp_off.png</normaloff>
+                            <normalon>../imgs/mp_on.png</normalon>../imgs/mp_off.png
+                        </iconset>
+                    </attribute>
+                    <attribute name="title">
+                        <string/>
+                    </attribute>
+                    <widget class="QListView" name="mplist">
+                        <property name="geometry">
+                            <rect>
+                                <x>0</x>
+                                <y>50</y>
+                                <width>251</width>
+                                <height>481</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">color:#FFFFFF</string>
+                        </property>
+                        <property name="frameShape">
+                            <enum>QFrame::NoFrame</enum>
+                        </property>
+                        <property name="editTriggers">
+                            <set>QAbstractItemView::NoEditTriggers</set>
+                        </property>
+                        <property name="iconSize">
+                            <size>
+                                <width>32</width>
+                                <height>32</height>
+                            </size>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" name="searchmp">
+                        <property name="geometry">
+                            <rect>
+                                <x>10</x>
+                                <y>10</y>
+                                <width>201</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" name="searchmpButton">
+                        <property name="geometry">
+                            <rect>
+                                <x>220</x>
+                                <y>10</y>
+                                <width>31</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                        <property name="text">
+                            <string>&gt;&gt;</string>
+                        </property>
+                    </widget>
+                </widget>
+                <widget class="QWidget" name="translate">
+                    <attribute name="icon">
+                        <iconset>
+                            <normaloff>../imgs/translate_off.png</normaloff>
+                            <normalon>../imgs/translate_on.png</normalon>../imgs/translate_off.png
+                        </iconset>
+                    </attribute>
+                    <attribute name="title">
+                        <string/>
+                    </attribute>
+                    <widget class="QLabel" name="translateResult">
+                        <property name="geometry">
+                            <rect>
+                                <x>10</x>
+                                <y>150</y>
+                                <width>231</width>
+                                <height>131</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>翻译结果</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" name="translateText">
+                        <property name="geometry">
+                            <rect>
+                                <x>10</x>
+                                <y>90</y>
+                                <width>191</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" name="translateButton">
+                        <property name="geometry">
+                            <rect>
+                                <x>210</x>
+                                <y>90</y>
+                                <width>31</width>
+                                <height>31</height>
+                            </rect>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">background:#AAAAAA</string>
+                        </property>
+                        <property name="text">
+                            <string>&gt;&gt;</string>
+                        </property>
+                    </widget>
+                    <widget class="QPushButton" name="translatesoundButton">
+                        <property name="geometry">
+                            <rect>
+                                <x>80</x>
+                                <y>300</y>
+                                <width>80</width>
+                                <height>25</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>Sound</string>
+                        </property>
+                    </widget>
+                </widget>
+                <widget class="QWidget" name="setting">
+                    <attribute name="icon">
+                        <iconset>
+                            <normaloff>../imgs/setting_off.png</normaloff>
+                            <normalon>../imgs/setting_on.png</normalon>../imgs/setting_off.png
+                        </iconset>
+                    </attribute>
+                    <attribute name="title">
+                        <string/>
+                    </attribute>
+                    <widget class="QCheckBox" name="groupsound">
+                        <property name="geometry">
+                            <rect>
+                                <x>20</x>
+                                <y>30</y>
+                                <width>82</width>
+                                <height>23</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>群提示音</string>
+                        </property>
+                        <property name="checked">
+                            <bool>true</bool>
+                        </property>
+                        <property name="tristate">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox" name="friendsound">
+                        <property name="geometry">
+                            <rect>
+                                <x>20</x>
+                                <y>60</y>
+                                <width>81</width>
+                                <height>23</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>好友提示音</string>
+                        </property>
+                        <property name="checked">
+                            <bool>true</bool>
+                        </property>
+                        <property name="tristate">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                </widget>
+            </widget>
+            <widget class="QWidget" name="move_1" native="true">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>301</width>
+                        <height>61</height>
+                    </rect>
+                </property>
+                <property name="styleSheet">
+                    <string notr="true">background:#4D4D4D</string>
+                </property>
+                <widget class="QLabel" name="title">
+                    <property name="geometry">
+                        <rect>
+                            <x>80</x>
+                            <y>10</y>
+                            <width>131</width>
+                            <height>31</height>
+                        </rect>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>12</pointsize>
+                        </font>
+                    </property>
+                    <property name="styleSheet">
+                        <string notr="true">color:#F2F2F2</string>
+                    </property>
+                    <property name="text">
+                        <string>Wechat Qt</string>
+                    </property>
+                    <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLabel" name="selfpic">
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>10</y>
+                            <width>41</width>
+                            <height>41</height>
+                        </rect>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>12</pointsize>
+                        </font>
+                    </property>
+                    <property name="styleSheet">
+                        <string notr="true">color:#F2F2F2</string>
+                    </property>
+                    <property name="text">
+                        <string>PIC</string>
+                    </property>
+                    <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+        <widget class="QFrame" name="frame_2">
+            <property name="geometry">
+                <rect>
+                    <x>300</x>
+                    <y>0</y>
+                    <width>501</width>
+                    <height>601</height>
+                </rect>
+            </property>
+            <property name="autoFillBackground">
+                <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">background:#F2F2F2</string>
+            </property>
+            <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="chatname">
+                <property name="geometry">
+                    <rect>
+                        <x>70</x>
+                        <y>10</y>
+                        <width>341</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                    </sizepolicy>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>12</pointsize>
+                    </font>
+                </property>
+                <property name="text">
+                    <string>选择聊天</string>
+                </property>
+                <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                </property>
+            </widget>
+            <widget class="QScrollArea" name="scrollArea">
+                <property name="geometry">
+                    <rect>
+                        <x>30</x>
+                        <y>70</y>
+                        <width>441</width>
+                        <height>391</height>
+                    </rect>
+                </property>
+                <property name="styleSheet">
+                    <string notr="true">background:#F2F2F2</string>
+                </property>
+                <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="widgetResizable">
+                    <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                    <property name="geometry">
+                        <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>441</width>
+                            <height>391</height>
+                        </rect>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QTextEdit" name="textEdit">
+                <property name="geometry">
+                    <rect>
+                        <x>30</x>
+                        <y>480</y>
+                        <width>381</width>
+                        <height>101</height>
+                    </rect>
+                </property>
+                <property name="styleSheet">
+                    <string notr="true">background:rgb(255, 255, 255)</string>
+                </property>
+                <property name="inputMethodHints">
+                    <set>Qt::ImhMultiLine</set>
+                </property>
+                <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="send">
+                <property name="geometry">
+                    <rect>
+                        <x>420</x>
+                        <y>510</y>
+                        <width>60</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>发送</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="clean">
+                <property name="geometry">
+                    <rect>
+                        <x>420</x>
+                        <y>550</y>
+                        <width>60</width>
+                        <height>30</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>清除</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="closeButton">
+                <property name="geometry">
+                    <rect>
+                        <x>460</x>
+                        <y>0</y>
+                        <width>41</width>
+                        <height>41</height>
+                    </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>14</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                    </font>
+                </property>
+                <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                    <string>×</string>
+                </property>
+                <property name="checkable">
+                    <bool>false</bool>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+                <property name="flat">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="min">
+                <property name="geometry">
+                    <rect>
+                        <x>420</x>
+                        <y>0</y>
+                        <width>41</width>
+                        <height>41</height>
+                    </rect>
+                </property>
+                <property name="font">
+                    <font>
+                        <pointsize>14</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                    </font>
+                </property>
+                <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                    <string>－</string>
+                </property>
+                <property name="checkable">
+                    <bool>false</bool>
+                </property>
+                <property name="autoDefault">
+                    <bool>false</bool>
+                </property>
+                <property name="flat">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QFrame" name="mpframe">
+                <property name="geometry">
+                    <rect>
+                        <x>30</x>
+                        <y>70</y>
+                        <width>441</width>
+                        <height>391</height>
+                    </rect>
+                </property>
+                <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QPushButton" name="mpb">
+                    <property name="geometry">
+                        <rect>
+                            <x>420</x>
+                            <y>0</y>
+                            <width>21</width>
+                            <height>21</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>刷</string>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>
